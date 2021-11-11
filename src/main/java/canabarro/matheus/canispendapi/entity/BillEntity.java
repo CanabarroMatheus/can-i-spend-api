@@ -29,6 +29,9 @@ public class BillEntity {
     @Column(name = "DUE_DAY")
     private Byte dueDay;
 
+    @Column(name = "DESCRIPTION", length = 500)
+    private String description;
+
     @Column(name = "IS_FINISHED", nullable = false)
     private Boolean isFinished;
 
