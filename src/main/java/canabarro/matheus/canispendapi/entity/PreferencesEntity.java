@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -22,6 +23,9 @@ public class PreferencesEntity {
 
     @Column(name = "SAVING_PERCENTAGE", nullable = false)
     private Double savingPercentage;
+
+    @Column(name = "UPDATED_AT", nullable = false)
+    private LocalDateTime updatedAt;
 
     @ManyToOne
     @JoinColumn(name = "ID_BALANCE", referencedColumnName = "ID_BALANCE")
