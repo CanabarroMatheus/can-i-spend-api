@@ -30,6 +30,9 @@ public class CreditEntity {
     @Column(name = "ISSUE_DATE", nullable = false)
     private LocalDate issueDate;
 
+    @Column(name = "DESCRIPTION", length = 500)
+    private String description;
+
     @ManyToOne
     @JoinColumn(name = "ID_BALANCE", referencedColumnName = "ID_BALANCE")
     private BalanceEntity balance;
