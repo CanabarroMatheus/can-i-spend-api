@@ -14,6 +14,7 @@ public class BillResponse {
     private String title;
     private Double price;
     private Byte dueDay;
+    private String description;
     private Boolean isFinished;
     private Boolean isMonthly;
     private Long idBalance;
