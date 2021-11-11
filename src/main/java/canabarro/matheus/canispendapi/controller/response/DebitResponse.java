@@ -22,5 +22,6 @@ public class DebitResponse {
     @JsonSerialize(using = LocalDateSerializer.class)
     @JsonDeserialize(using = LocalDateDeserializer.class)
     private LocalDate issueDate;
+    private String description;
     private Long idBalance;
 }
