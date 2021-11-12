@@ -27,7 +27,7 @@ public class PreferencesEntity {
     @Column(name = "UPDATED_AT", nullable = false)
     private LocalDateTime updatedAt;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "ID_BALANCE", referencedColumnName = "ID_BALANCE")
     private BalanceEntity balance;
 }
