@@ -9,6 +9,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Getter
@@ -16,7 +17,7 @@ import java.time.LocalDateTime;
 @Builder
 public class PreferencesResponse {
     private Long id;
-    private Double savingPercentage;
+    private BigDecimal savingPercentage;
     @JsonFormat(pattern = "DD/MM/YYYY [às] HH:mm")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)

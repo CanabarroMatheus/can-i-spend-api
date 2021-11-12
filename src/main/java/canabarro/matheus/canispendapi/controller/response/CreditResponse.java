@@ -9,6 +9,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Getter
@@ -17,7 +18,7 @@ import java.time.LocalDate;
 public class CreditResponse {
     private Long id;
     private String title;
-    private Double amount;
+    private BigDecimal amount;
     @JsonFormat(pattern = "dd/MM/yyyy")
     @JsonSerialize(using = LocalDateSerializer.class)
     @JsonDeserialize(using = LocalDateDeserializer.class)

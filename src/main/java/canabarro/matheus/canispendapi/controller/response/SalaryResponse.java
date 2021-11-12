@@ -9,6 +9,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Getter
@@ -16,7 +17,7 @@ import java.time.LocalDateTime;
 @Builder
 public class SalaryResponse {
     private Long id;
-    private Double income;
+    private BigDecimal income;
     private Byte payDay;
     private Boolean isRegulatedPaid;
     @JsonFormat(pattern = "DD/MM/YYYY [às] HH:mm")

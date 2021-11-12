@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Getter
@@ -11,7 +12,7 @@ import java.util.List;
 @Builder
 public class BalanceResponse {
     private Long id;
-    private Double balance;
+    private BigDecimal balance;
     private SalaryResponse salary;
     private String username;
     private PreferencesResponse preferences;

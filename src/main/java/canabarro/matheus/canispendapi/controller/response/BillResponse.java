@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Getter
 @Setter
 @Builder
@@ -12,7 +14,7 @@ import lombok.Setter;
 public class BillResponse {
     private Long id;
     private String title;
-    private Double price;
+    private BigDecimal price;
     private Byte dueDay;
     private String description;
     private Boolean isFinished;
