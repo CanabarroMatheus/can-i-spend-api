@@ -22,15 +22,15 @@ public class BalanceEntity {
     @Column(name = "ID_BALANCE")
     private Long id;
 
-    @Column(name = "INCOME", nullable = false)
-    private Double income;
-
-    @Column(name = "PAY_DAY", nullable = false)
-    private LocalDate payDay;
+    @Column(name = "BALANCE", nullable = false)
+    private Double balance;
 
     @OneToOne
     @JoinColumn(name = "ID_USER", referencedColumnName = "ID_USER")
     private UserEntity user;
+
+    @OneToOne(mappedBy = "balance", cascade = CascadeType.ALL, orphanRemoval = true)
+    private SalaryEntity salary;
 
     @OneToOne(mappedBy = "balance", cascade = CascadeType.ALL, orphanRemoval = true)
     private PreferencesEntity preferences;
