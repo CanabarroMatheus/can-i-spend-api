@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -23,7 +24,7 @@ public class BalanceEntity {
     private Long id;
 
     @Column(name = "BALANCE", nullable = false)
-    private Double balance;
+    private BigDecimal balance;
 
     @OneToOne
     @JoinColumn(name = "ID_USER", referencedColumnName = "ID_USER")

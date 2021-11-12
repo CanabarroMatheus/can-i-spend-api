@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Getter
@@ -25,7 +26,7 @@ public class CreditEntity {
     private String title;
 
     @Column(name = "AMOUNT", nullable = false)
-    private Double amount;
+    private BigDecimal amount;
 
     @Column(name = "ISSUE_DATE", nullable = false)
     private LocalDate issueDate;
