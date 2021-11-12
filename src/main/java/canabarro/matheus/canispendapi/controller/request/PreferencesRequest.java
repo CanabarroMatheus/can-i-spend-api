@@ -7,6 +7,7 @@ import lombok.Setter;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.PositiveOrZero;
+import java.math.BigDecimal;
 
 @Getter
 @Setter
@@ -14,7 +15,7 @@ import javax.validation.constraints.PositiveOrZero;
 public class PreferencesRequest {
     @NotNull
     @PositiveOrZero
-    private Double savingPercentage;
+    private BigDecimal savingPercentage;
     @NotNull
     @Positive
     private Long idBalance;

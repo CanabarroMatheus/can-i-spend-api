@@ -9,6 +9,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.PositiveOrZero;
+import java.math.BigDecimal;
 
 @Getter
 @Setter
@@ -19,7 +20,7 @@ public class BillRequest {
     private String title;
     @NotNull
     @PositiveOrZero
-    private Double price;
+    private BigDecimal price;
     @PositiveOrZero
     private Byte dueDay;
     @Length(max = 500)

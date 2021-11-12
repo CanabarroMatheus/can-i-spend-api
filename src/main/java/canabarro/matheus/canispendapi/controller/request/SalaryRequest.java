@@ -8,6 +8,7 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.PositiveOrZero;
+import java.math.BigDecimal;
 
 @Getter
 @Setter
@@ -15,7 +16,7 @@ import javax.validation.constraints.PositiveOrZero;
 public class SalaryRequest {
     @NotNull
     @PositiveOrZero
-    private Double income;
+    private BigDecimal income;
     @Positive
     @Max(30)
     private Byte payDay;
